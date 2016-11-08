@@ -1,0 +1,27 @@
+{
+  "name": "angular-smart",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "format": "cjs",
+  "peerDependencies": {
+    "angular": ">=1.5 <1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kindy/angular-smart.git"
+  },
+  "keywords": [
+    "angular",
+    "webpack"
+  ],
+  "author": "Kindy Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kindy/angular-smart/issues"
+  },
+  "homepage": "https://github.com/kindy/angular-smart#readme"
+}
