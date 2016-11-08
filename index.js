@@ -93,7 +93,7 @@
 
 	  var finalDeps = deps.concat(otherDeps || []);
 
-	  var module = _angular2.default.module('linkdocApp', finalDeps);
+	  var module = _angular2.default.module(name, finalDeps);
 
 	  for (var _name in stuff.component) {
 	    module.component(_name, new stuff.component[_name]());

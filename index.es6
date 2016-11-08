@@ -38,7 +38,7 @@ export function createModule(name, requireContext, otherDeps) {
 
   const finalDeps = deps.concat(otherDeps || []);
 
-  const module = angular.module('linkdocApp', finalDeps);
+  const module = angular.module(name, finalDeps);
 
   for (let name in stuff.component) {
     module.component(name, new stuff.component[name]());
