@@ -52,3 +52,27 @@ export function createModule(name, requireContext, otherDeps) {
 
   return module;
 }
+
+/**
+ * createRequireContext({
+ *   './abc.component.js': require('./abc.component.js'),
+ * });
+ */
+export function createRequireContext(modules) {
+  const modules_ = {
+    ...modules,
+  };
+
+  function requireContext(key) {
+    const module = modules_[key];
+    if (!module) {
+      throw new Error(`Cannot find module "${key}"`);
+    }
+
+    return module;
+  }
+
+  requireContext.keys = () => Object.keys(modules_);
+
+  return requireContext;
+}

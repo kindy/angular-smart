@@ -1,6 +1,6 @@
 # angular-smart
 
-This module should be used with Webpack now.
+This module should be used with Webpack.
 
 ```js
 // -- abc/module.js --
@@ -26,8 +26,9 @@ export default class myAComponent {
   controller = Controller;
 
   template = `
-    <md-button />
+    <md-button></md-button>
     {{ 1 | myA }}
+    data: {{ $ctrl.data }}
   `;
 }
 
@@ -40,7 +41,8 @@ export default class myAController {
   }
 
   $onInit() {
-    this.$myA.getData();
+    this.$myA.getData()
+      .then((data) => {this.data = data;});
   }
 }
 
@@ -67,6 +69,14 @@ export default class $myAService {
 }
 ```
 
+
+# TODO
+
+* do we support Angular `Factory` or `Provider`?<br>
+  Factory is good to use with `$resource`
+* how to handle `.run` and `.config`.<br>
+  currently we can do this in module.js manually.
+* is it good to support [ng1-jsx](https://github.com/thorn0/babel-plugin-transform-ng1-jsx)? 
 
 
 
