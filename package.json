@@ -1,11 +1,11 @@
 {
   "name": "angular-smart",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "format": "cjs",
   "peerDependencies": {
-    "angular": ">=1.5 <1.6",
+    "angular": ">=1.5 <1.7",
     "webpack": "^1.13.3"
   },
   "scripts": {
